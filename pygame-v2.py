@@ -1,13 +1,18 @@
 import pygame
 import sys
 
-# Initialize Pygame
-pygame.init()
-
 # Constants
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 FPS = 30
+FONT_FILE = 'font.ttf'  # Path to your custom font file
+
+# Initialize Pygame
+pygame.init()
+
+# Load custom font
+font = pygame.font.Font(FONT_FILE, 36)
+
 WALL_COLOR = (0, 0, 255)  # Blue color for the walls, similar to the original game
 KEY_COLOR = (255, 255, 0)  # Color for keys
 DOOR_COLOR = (139, 69, 19)  # Color for doors
@@ -114,30 +119,42 @@ def handle_input(player):
         dx = 1
     return dx, dy
 
-# Main game loop
+def render_text(screen, text, x, y, color=(255, 255, 255)):
+    text_surface = font.render(text, True, color)
+    screen.blit(text_surface, (x, y))
+
 def game_loop():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     pygame.display.set_caption("Prison Riot")
     clock = pygame.time.Clock()
     running = True
 
+    # Initialize game elements
     player = Player(100, 100)
     room = Room()
     keys = [InteractiveObject(300, 300, 20, 20, KEY_COLOR)]  # Example key object
     doors = [InteractiveObject(500, 200, 20, 50, DOOR_COLOR)]  # Example door
     npcs = [NPC(200, 200)]
 
+    game = Game()  # Initialize the game logic
+
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
 
+        # Handle player input
         dx, dy = handle_input(player)
         player.move(dx, dy, room.walls, keys + doors)
+
+        # Update NPCs
         for npc in npcs:
             npc.update(room.walls)
 
-        screen.fill((0, 0, 0))  # Clear screen
+        # Clear the screen
+        screen.fill((0, 0, 0))
+
+        # Draw game elements
         room.draw(screen)
         for key in keys:
             key.draw(screen)
@@ -148,5 +165,12 @@ def game_loop():
         player.draw(screen)
         draw_hud(screen)
 
+        # Render any text or game-related information
+        render_text(screen, "PRISON RIOT", 10, 10)  # Example of text rendering
+
+        # Update the display
         pygame.display.flip()
         clock.tick(FPS)
+
+    pygame.quit()
+    sys.exit()
