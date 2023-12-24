@@ -1,3 +1,15 @@
+# PRISON-RIOT
+# TODO: Implement more complex prison layout
+# TODO: Create more character classes with health, behavior
+# TODO: Add escape mechanics
+# TODO: Develop riot and emergency mechanics
+# TODO: Enhance combat system
+# TODO: Integrate graphics and animations
+# TODO: Improve User Interface
+# TODO: Add sound effects and music
+# TODO: Optimize and refine game loop
+# TODO: Regular testing and debugging
+
 import pygame
 
 # Constants
