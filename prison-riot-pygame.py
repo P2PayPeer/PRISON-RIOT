@@ -1,5 +1,4 @@
 import pygame
-import sys
 
 # Constants
 SCREEN_WIDTH = 800
@@ -16,6 +15,7 @@ font = pygame.font.Font(FONT_FILE, 36)
 WALL_COLOR = (0, 0, 255)  # Blue color for the walls, similar to the original game
 KEY_COLOR = (255, 255, 0)  # Color for keys
 DOOR_COLOR = (139, 69, 19)  # Color for doors
+
 
 # Player class
 class Player:
@@ -44,7 +44,7 @@ class Player:
 
     def check_collision(self, walls, interactive_objects):
         for wall in walls:
-            if self.rect.colliderect(wall.rect):
+            if self.rect.colliderect(wall):
                 return True
         for obj in interactive_objects:
             if self.rect.colliderect(obj.rect):
@@ -59,6 +59,7 @@ class Player:
     def draw(self, screen):
         screen.blit(self.image, (self.rect.x, self.rect.y))
 
+
 # InteractiveObject class
 class InteractiveObject:
     def __init__(self, x, y, width, height, color):
@@ -67,6 +68,7 @@ class InteractiveObject:
 
     def draw(self, screen):
         pygame.draw.rect(screen, self.color, self.rect)
+
 
 # Room class
 class Room:
@@ -81,6 +83,7 @@ class Room:
     def draw(self, screen):
         for wall in self.walls:
             pygame.draw.rect(screen, WALL_COLOR, wall)
+
 
 # NPC class
 class NPC:
@@ -97,13 +100,14 @@ class NPC:
     def draw(self, screen):
         screen.blit(self.image, (self.x, self.y))
 
+
 # HUD function
 def draw_hud(screen):
-    font = pygame.font.Font(None, 36)
     score_text = font.render('Score: 000000', True, (255, 255, 255))
     time_text = font.render('Time Left: 15:00', True, (255, 255, 255))
     screen.blit(score_text, (10, SCREEN_HEIGHT - 30))
     screen.blit(time_text, (SCREEN_WIDTH - 150, SCREEN_HEIGHT - 30))
+
 
 # Game logic functions
 def handle_input(player):
@@ -119,10 +123,13 @@ def handle_input(player):
         dx = 1
     return dx, dy
 
+
 def render_text(screen, text, x, y, color=(255, 255, 255)):
     text_surface = font.render(text, True, color)
     screen.blit(text_surface, (x, y))
 
+
+# Game loop
 def game_loop():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     pygame.display.set_caption("Prison Riot")
@@ -135,8 +142,6 @@ def game_loop():
     keys = [InteractiveObject(300, 300, 20, 20, KEY_COLOR)]  # Example key object
     doors = [InteractiveObject(500, 200, 20, 50, DOOR_COLOR)]  # Example door
     npcs = [NPC(200, 200)]
-
-    game = Game()  # Initialize the game logic
 
     while running:
         for event in pygame.event.get():
@@ -166,11 +171,13 @@ def game_loop():
         draw_hud(screen)
 
         # Render any text or game-related information
-        render_text(screen, "PRISON RIOT", 10, 10)  # Example of text rendering
+        render_text(screen, "PRISON RIOT", 10, 10)
 
         # Update the display
         pygame.display.flip()
         clock.tick(FPS)
 
-    pygame.quit()
-    sys.exit()
+
+# Start the game loop
+if __name__ == '__main__':
+    game_loop()
