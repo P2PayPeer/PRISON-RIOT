@@ -1,0 +1,80 @@
+{
+  "GameName": "PRISON-RIOT",
+  "Roles": {
+    "Prisoner": {
+      "Objective": "Escape the prison",
+      "Tools": ["Hammer", "Knife", "Keycard"],
+      "EscapeRoutes": ["Sewers", "Knife and Keycard", "Cafeteria Vents"],
+      "Interactions": {
+        "Guards": "Avoid or distract",
+        "Criminals": "Collaborate for escape",
+        "NPCs": "Limited interaction, mainly avoidance",
+        "Players": "Form alliances, share tools, plan escapes"
+      },
+      "Challenges": "Stealth, finding tools, avoiding guards",
+      "PsychologicalAspects": {
+        "Empathy": "Decisions impact moral and ethical perspectives",
+        "StressManagement": "Managing high-stress situations during escape attempts"
+      }
+    },
+    "Guard": {
+      "Objective": "Prevent escapes, maintain order",
+      "Equipment": ["Pistol", "Shotgun", "Handcuffs", "Taser"],
+      "Strategies": ["Patrolling", "Surveillance", "Responding to Alerts"],
+      "Rules": "Penalties for harming innocent prisoners",
+      "NPC Interaction": "Coordination with other guards",
+      "Player Interaction": "Monitoring and responding to prisoner activities",
+      "PsychologicalAspects": {
+        "MoralDecisionMaking": "Balancing enforcement with ethical considerations",
+        "TeamCoordination": "Developing teamwork and leadership skills"
+      }
+    },
+    "Criminal": {
+      "Objective": "Assist in escapes, engage with guards",
+      "Access": ["Outside weapons", "Hideout"],
+      "Actions": ["Attack guards", "Aid prisoners"],
+      "Transition": "Escaped prisoners become criminals",
+      "NPC Interaction": "Adversarial against guards",
+      "Player Interaction": "Aid prisoners, engage with guards",
+      "PsychologicalAspects": {
+        "IdentityExploration": "Exploring different aspects of identity through role-play",
+        "ConflictResolution": "Navigating conflicts with guards and prisoners"
+      }
+    }
+  },
+  "GameplayMechanics": {
+    "Collaboration": "Team play enhances experience",
+    "Environment": "Interactive prison setting with various tools and routes",
+    "RoleChallenges": "Unique challenges and gameplay for each role",
+    "Glitches": "Known game glitches for strategic advantage or challenges",
+    "Dynamic Environment": "Changes in environment affecting strategies",
+    "Event-Triggered Scenarios": "Actions triggering events like lockdowns"
+  },
+  "Updates": {
+    "PerformanceImprovements": true,
+    "InterfaceEnhancements": true,
+    "SoundUpdates": true
+  },
+  "Strategies": {
+    "Adaptability": "Adapting to dynamic gameplay situations",
+    "Planning": "Strategic planning for escapes or defense"
+  },
+  "Features": {
+    "InteractiveObjects": "Objects that can be interacted with in-game",
+    "NPCBehaviors": "Set behaviors and roles for non-player characters",
+    "DayNightCycle": "Affects gameplay visibility and strategies"
+  },
+  "ChallengesAndRewards": {
+    "EscapeRewards": "Rewards for successful escapes or preventing escapes",
+    "SkillDevelopment": "Players can improve stealth, combat, or strategy skills",
+    "ReputationSystem": "Player actions influence reputation with others"
+  },
+  "CommunityAspects": {
+    "TeamPlay": "Collaboration and communication among players is vital",
+    "RoleDynamics": "Each role impacts the game environment differently",
+    "DiversityAndInclusion": "Promoting a diverse and inclusive player base",
+    "EthicalImplications": "Scenarios prompting ethical and moral considerations",
+    "RealWorldParallels": "Drawing parallels with real-world societal issues",
+    "MentalHealthAwareness": "Promoting awareness and strategies for well-being"
+  }
+}
