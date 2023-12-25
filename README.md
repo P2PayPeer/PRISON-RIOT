@@ -21,3 +21,29 @@ Continuing the development of the `PRISON RIOT`
 9. **Sound Effects and Music**: Integrate background music and sound effects for actions and events.
 
 10. **Testing and Debugging**: Regularly test the game for bugs and performance issues, making necessary adjustments.
+
+## Forbidden Escape - A Prison Riot Game
+
+There are several methods defined that handle different aspects of the gameplay:
+
+*  `__init__()` initializes the game objects.
+
+*  `display_intro()` displays the introductory message to the player.
+
+*  `make_choice()` allows the user to choose between given options by entering their chosen number.
+
+*  `talk_to_aria()` lets the player interact with the AI character Aria. Their level of trust determines how much information Aria shares. This interaction also affects the player’s sanity and strengthens their relationship with Aria.
+
+*  `explore_cell()` allows the player to search their cell and potentially find useful items that can increase their evidence count and possibly aid them in finding the key.
+
+*  `rest()` enables the player to rest, which increases their sanity.
+
+*  `check_status()` shows the current state of the game including the day number, remaining sanity, collected evidence, relationship with Aria, and whether they possess the key.
+
+*  `random_event()` generates a randomly selected event each day, adding more dynamic elements to the gameplay.
+
+*  `solve_puzzle()` presents the player with a puzzle to solve. If they correctly answer it (echo), they unlock a hidden passage and gain additional evidence.
+
+*  `progress_day()` advances the game to the next day, decreases the player’s sanity, triggers another random event, and updates any necessary variables.
+
+Interactive story-driven adventure game with elements of exploration, puzzles, and building relationships, while navigating through the challenges of imprisonment.
