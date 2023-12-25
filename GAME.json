@@ -1,0 +1,62 @@
+{
+  "GameName": "Forbidden Escape - A Prison Riot Game",
+  "Setting": "Raiyaku Penitentiary",
+  "PlayerCharacter": "Prisoner X",
+  "GameVariables": {
+    "Sanity": "Tracks player's mental state",
+    "Evidence": "Amount of evidence gathered",
+    "RelationshipWithAria": "Level of trust and interaction with AI, Aria",
+    "CurrentDay": "Indicates the progress in days",
+    "HasKey": "Boolean indicating possession of a key"
+  },
+  "GameplayMethods": {
+    "Init": "Initializes the game objects",
+    "DisplayIntro": "Displays the introductory message to the player",
+    "MakeChoice": {
+      "Description": "Allows user to choose between options",
+      "Input": "Player enters chosen number"
+    },
+    "TalkToAria": {
+      "Description": "Interact with AI character Aria",
+      "Effects": {
+        "Sanity": "Affects player’s sanity",
+        "Relationship": "Strengthens relationship with Aria"
+      }
+    },
+    "ExploreCell": {
+      "Description": "Search cell for items",
+      "Effects": {
+        "Evidence": "Increases evidence count",
+        "FindKey": "Potential to find a key"
+      }
+    },
+    "Rest": {
+      "Description": "Rest to recover",
+      "Effect": "Increases sanity"
+    },
+    "CheckStatus": "Shows current game state including day, sanity, evidence, relationship, and key possession",
+    "RandomEvent": {
+      "Description": "Generates a random event each day",
+      "DynamicElement": "Adds dynamic elements to gameplay"
+    },
+    "SolvePuzzle": {
+      "Description": "Presents a puzzle to solve",
+      "Outcome": "Correct solution reveals hidden passage and gains evidence"
+    },
+    "ProgressDay": {
+      "Description": "Advances to the next day",
+      "Effects": {
+        "DecreaseSanity": "Reduces player's sanity",
+        "TriggerEvent": "Initiates a new random event",
+        "UpdateVariables": "Updates game variables as needed"
+      }
+    }
+  },
+  "GameType": "Interactive story-driven adventure",
+  "Features": [
+    "Exploration",
+    "Puzzles",
+    "Building Relationships",
+    "Navigating Imprisonment Challenges"
+  ]
+}
