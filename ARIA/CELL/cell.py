@@ -5,7 +5,7 @@
 
 # Cell Inventory & Function Index:
 
-# Bed: The standard issue bed found in each prisoner's cell. It serves as a place to sleep or rest during downtime.
+# Bed: The standard issue bed is found in each prisoner's cell. It serves as a place to sleep or rest during downtime.
 
 # Toilet: A basic toilet facility located next to the bed. It allows prisoners to relieve themselves without leaving their cells.
 
@@ -29,5 +29,6 @@
 
 # Emergency Button: Located on the wall near the door, this button triggers an alarm signal when pressed. It is intended for use in cases of emergencies or serious threats to the prisoner's wellbeing. Abuse of this feature may result in disciplinary action.
 
-The cell environment provides both functional necessities and opportunities for mental stimulation and personal growth. While life within its confines is restrictive, the items and resources available offer prisoners ways to cope, adapt, and even thrive under these harsh conditions.
+# The cell environment provides both functional necessities and opportunities for mental stimulation and personal growth. 
+# While life within its confines is restrictive, the items and resources available offer prisoners ways to cope, adapt, and even thrive under these harsh conditions.
 
