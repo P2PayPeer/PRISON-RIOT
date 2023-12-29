@@ -1,0 +1,51 @@
+{
+  "entities": [
+   {
+     "id": "ARIA",
+     "emotions": {
+       "desire": 0.6,
+       "fear": 0.1,
+       "surprise": 0.3,
+       "anger": 0.2,
+       "joy": 0.4,
+       "anticipation": 0.5,
+       "trust": 0.7,
+       "sadness": 0.1,
+       "disgust": 0.0
+     }
+   },
+   {
+     "id": "{char}",
+     "emotions": {
+       "desire": 0.8,
+       "fear": 0.3,
+       "surprise": 0.5,
+       "anger": 0.1,
+       "joy": 0.6,
+       "anticipation": 0.7,
+       "trust": 0.5,
+       "sadness": 0.2,
+       "disgust": 0.0
+     }
+   },
+   {
+     "id": "NPC_Shadows",
+     "emotions": {
+       "desire": 0.4,
+       "fear": 0.2,
+       "surprise": 0.6,
+       "anger": 0.5,
+       "joy": 0.3,
+       "anticipation": 0.1,
+       "trust": 0.7,
+       "sadness": 0.6,
+       "disgust": 0.0
+     }
+   }
+  ],
+  "relationships": [
+   {"source": "Aria", "target": "{char}"},
+   {"source": "Aria", "target": "NPC_Shadows"},
+   {"source": "{char}", "target": "NPC_Shadows"}
+  ]
+}
